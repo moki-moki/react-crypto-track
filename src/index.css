@@ -1,13 +1,420 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
+:root {
+  --primaryColor: #1a1e25;
+  --secondaryColor: #373e4c;
+  --secondaryColorContrast: #2d333f;
+  --heading: #77cedd;
+  --text: #e9e9e9;
+  --button: #52ffb8;
+  --buttonClick: #81c14b;
+  --fontFamily: "Merriweather", serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fontFamily);
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--primaryColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--heading);
+}
+
+p {
+  color: var(--text);
+}
+
+a {
+  color: var(--button);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--buttonClick);
+  transition: 0.3s ease all;
+}
+
+li {
+  list-style: none;
+}
+
+/*loader*/
+.double {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1,
+.double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(212, 212, 212);
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  animation-delay: -1s;
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+/*nav*/
+.ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0 10px 0;
+  font-size: 30px;
+  border-bottom: 5px solid var(--secondaryColor);
+}
+
+.li {
+  padding: 20px 0;
+}
+
+/*TAble style*/
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.8em;
+  min-width: 80%;
+}
+
+thead {
+  border-bottom: 3px solid #4c6faa;
+}
+
+thead th {
+  color: var(--heading);
+}
+
+thead th:nth-child(1) {
+  width: 5%;
+}
+
+thead th:nth-child(2) {
+  width: 15%;
+}
+
+thead th:nth-child(3) {
+  width: 20%;
+}
+
+thead th:nth-child(4) {
+  width: 10%;
+}
+
+thead th:nth-child(5) {
+  width: 30%;
+}
+
+th,
+td {
+  padding: 10px;
+  color: var(--text);
+}
+
+tbody td {
+  text-align: center;
+}
+
+.thName {
+  color: var(--heading);
+}
+
+.namePictureAlign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(5px, 15px, 30px);
+}
+
+.imageSize {
+  width: 40px;
+  padding: 0 10px 0 0;
+}
+
+.redPrecentage {
+  color: #e15241;
+}
+
+.greenPrecentage {
+  color: #4eaf0a;
+}
+
+.symbol {
+  margin: 0px 0px 0px 10px;
+  color: var(--text);
+}
+
+/*table zebra stripes*/
+tbody tr:nth-child(odd) {
+  background-color: var(--secondaryColor);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--secondaryColorContrast);
+}
+
+/*top coins*/
+.topCoins {
+  padding: 15px;
+}
+
+.topCoins > h5 {
+  color: var(--button);
+}
+
+.topCoinRank {
+  color: var(--heading);
+}
+
+.topCoinRank > a {
+  margin: 0 7px;
+}
+
+.topCoinRank > h5 {
+  margin: 0 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  width: 100vw;
+}
+
+.pageNum {
+  color: var(--heading);
+  cursor: pointer;
+  padding: 20px;
+}
+
+.pageNum:hover {
+  color: var(--buttonClick);
+  transition: 0.3s ease all;
+}
+
+ul > .pageNum {
+  border: 1px solid var(--text);
+  margin: 0 5px;
+}
+
+ul > .pageNum:hover {
+  border-color: var(--buttonCLick);
+  transition: 0.3s ease all;
+}
+
+/*chart */
+.btns {
+  padding: 30px;
+  margin: 40px 10px 40px 10px;
+  display: flex;
+  background: var(--secondaryColorContrast);
+  border: 3px solid var(--secondaryColor);
+  border-radius: 20px;
+}
+
+.btn {
+  padding: 10px;
+  margin: 0 10px;
+  width: 50%;
+  background: none;
+  color: var(--text);
+  border: 2px solid var(--button);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.header {
+  text-align: center;
+}
+
+.lowHighLine {
+  margin: 0 4px;
+}
+
+@media screen and (max-width: 456px) {
+  .btns {
+    padding: 20px;
+  }
+  .btn {
+    padding: 4px;
+    margin: 0 5px;
+  }
+}
+
+.btn:hover {
+  border: 2px solid var(--buttonClick);
+  background: var(--secondaryColor);
+  transition: 0.2s ease all;
+}
+
+/*notes styling*/
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 50%;
+  padding: 10px;
+  background: none;
+  color: var(--heading);
+  border: 3px solid var(--secondaryColor);
+  border-radius: 15px 15px 0 0;
+  font-size: 25px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.textArea {
+  width: 50%;
+  padding: 10px;
+  border: 3px solid var(--secondaryColor);
+  border-radius: 0 0 15px 15px;
+  background: none;
+  color: var(--text);
+  resize: none;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 50px 10px;
+  align-items: center;
+  margin: 5rem, 1em;
+}
+
+.noteInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.note {
+  background: var(--secondaryColorContrast);
+  padding: 10px;
+  margin: 10px 15px;
+  height: 200px;
+  border-radius: 20px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.note:hover {
+  transition: all 0.3s ease;
+  box-shadow: 14px 15px 13px -9px rgba(0, 0, 0, 0.47);
+}
+
+.note > h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.del {
+  background: var(--secondaryColor);
+  color: var(--text);
+  height: 5vh;
+  max-width: auto;
+  border: 3px solid var(--primaryColor);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.del:hover {
+  background: var(--primaryColor);
+  transition: 0.3s ease all;
+  cursor: pointer;
+}
+� .date {
+  margin: 10px 0;
+}
+
+.noteBtn {
+  margin: 10px 0;
+  padding: 10px;
+  width: 30%;
+  font-size: 2em;
+  color: var(--button);
+  background: none;
+  border: 3px solid var(--secondaryColor);
+  border-radius: 10px;
+}
+
+.noteBtn:hover {
+  cursor: pointer;
+  color: var(--buttonClick);
+  transition: all 0.3s ease;
+  background: var(--secondaryColorContrast);
+  box-shadow: 9px 8px 23px -11px rgba(0, 0, 0, 0.69);
+}
+
+@media screen and (max-width: 780px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media screen and(min-width:642px) {
+  .mainTable {
+    overflow-x: auto;
+  }
+  #myChart {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 518px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 448px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.apexcharts-candlestick {
+  justify-content: center;
 }
