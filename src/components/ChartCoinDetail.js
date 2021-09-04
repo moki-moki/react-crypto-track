@@ -60,8 +60,6 @@ const ChartCoinDetail = ({ id }) => {
     getData();
   }, [days]);
 
-  console.log(days);
-
   return (
     <div>
       {isLoading ? (

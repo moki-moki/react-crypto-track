@@ -88,13 +88,20 @@ li {
 .ul {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   margin: 10px 0 10px 0;
   font-size: 30px;
   border-bottom: 5px solid var(--secondaryColor);
+  width: 100%;
 }
 
 .li {
   padding: 20px 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
 }
 
 /*TAble style*/
@@ -154,7 +161,7 @@ tbody td {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: clamp(5px, 15px, 30px);
+  padding: clamp(2px, 15px, 30px);
 }
 
 .imageSize {
@@ -182,27 +189,6 @@ tbody tr:nth-child(odd) {
 
 tbody tr:nth-child(even) {
   background-color: var(--secondaryColorContrast);
-}
-
-/*top coins*/
-.topCoins {
-  padding: 15px;
-}
-
-.topCoins > h5 {
-  color: var(--button);
-}
-
-.topCoinRank {
-  color: var(--heading);
-}
-
-.topCoinRank > a {
-  margin: 0 7px;
-}
-
-.topCoinRank > h5 {
-  margin: 0 5px;
 }
 
 .pagination {
@@ -235,6 +221,11 @@ ul > .pageNum:hover {
 }
 
 /*chart */
+
+.apexcharts-candlestick {
+  justify-content: center;
+}
+
 .btns {
   padding: 30px;
   margin: 40px 10px 40px 10px;
@@ -348,6 +339,12 @@ ul > .pageNum:hover {
   font-size: 20px;
 }
 
+.noteBtns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .del {
   background: var(--secondaryColor);
   color: var(--text);
@@ -363,7 +360,15 @@ ul > .pageNum:hover {
   transition: 0.3s ease all;
   cursor: pointer;
 }
-� .date {
+
+.editInput {
+  background: var(--secondaryColorContrast);
+  color: var(--text);
+  border: 2px solid var(--text);
+  border-radius: 10px;
+}
+
+.date {
   margin: 10px 0;
 }
 
@@ -393,12 +398,16 @@ ul > .pageNum:hover {
   }
 }
 
-@media screen and(min-width:642px) {
-  .mainTable {
-    overflow-x: auto;
+@media screen and (max-width: 606px) {
+  table {
+    font-size: 0.6rem;
   }
-  #myChart {
-    max-width: 100%;
+  th,
+  td {
+    padding: 2px;
+  }
+  .namePictureAlign {
+    font-size: 0.6rem;
   }
 }
 
@@ -413,8 +422,4 @@ ul > .pageNum:hover {
   .grid {
     grid-template-columns: repeat(1, 1fr);
   }
-}
-
-.apexcharts-candlestick {
-  justify-content: center;
 }

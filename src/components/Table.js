@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import cryptoApi from "../api/cryptoApi";
 import Pagination from "./Pagination";
 import CoinList from "./CoinList";
@@ -45,7 +45,7 @@ const Table = () => {
         <Loader />
       ) : (
         <>
-          <table className="mainTable">
+          <table>
             <thead>
               <th>Rank</th>
               <th>Coin</th>
