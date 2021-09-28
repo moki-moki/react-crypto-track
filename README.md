@@ -1,7 +1,10 @@
-#This is a personal project.
+# This is a personal project.
 This is a Crypto Tracking App that uses [CoinGeckoApi](https://www.coingecko.com/api/documentations/v3) for displaying data and [Apex Chart](https://apexcharts.com/) for visualizing data.
 
 This app also has a simple google keep clone, that let's you create/edit/delete notes.
+
+# Demo
+[Live site](https://moki-moki.github.io/react-crypto-tracker/)
 
 # Todo
 1. Improve styling
