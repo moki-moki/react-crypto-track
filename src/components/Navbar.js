@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav>
       <ul className="ul">
         <li className="li">
-          <Link className="link" to="/">
+          <Link className="link" to="/react-crypto-tracker/">
             Home <AiOutlineHome className="icon" />
           </Link>
         </li>
