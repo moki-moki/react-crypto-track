@@ -92,12 +92,13 @@ const Notes = () => {
                 <input
                   className="editInput"
                   type="text"
+                  placeholder="Edit note..."
                   value={editText}
                   onChange={(e) => setEditText(e.target.value)}
                 />
               ) : (
                 <div className="noteInfo">
-                  <div>
+                  <div style={{ wordWrap: "anywhere" }}>
                     <h3>{note.title}</h3>
                     <p>{note.text}</p>
                   </div>

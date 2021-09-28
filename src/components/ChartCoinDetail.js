@@ -14,10 +14,6 @@ const ChartCoinDetail = ({ id }) => {
       chart: {
         type: "candlestick",
       },
-      title: {
-        text: id,
-        align: "center",
-      },
       xaxis: {
         type: "datetime",
         labels: {
@@ -48,14 +44,12 @@ const ChartCoinDetail = ({ id }) => {
         },
       });
 
-      console.log(res.data);
       const price = await res.data.map((p) => ({
         x: p[0],
         y: [p[1], p[2], p[3], p[4]],
       }));
       setIsLoading(false);
       setSeries([{ data: price }]);
-      console.log(series);
     };
     getData();
   }, [days]);

@@ -13,10 +13,8 @@ const CoinDetailData = ({ id }) => {
         },
       });
       setCoinData(res.data);
-      console.log(res.data);
     };
     getData();
-    console.log(coinData);
   }, []);
   return (
     <>

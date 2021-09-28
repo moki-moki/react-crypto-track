@@ -5,15 +5,13 @@ const Pagination = ({ totalPost, postPerPage, paginate }) => {
     pageNumbers.push(i);
   }
   return (
-    <nav>
-      <ul className="pagination">
-        {pageNumbers.map((num) => (
-          <li className="pageNum" key={num} onClick={() => paginate(num)}>
-            {num}
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <ul className="pagination">
+      {pageNumbers.map((num) => (
+        <li className="pageNum" key={num} onClick={() => paginate(num)}>
+          {num}
+        </li>
+      ))}
+    </ul>
   );
 };
 

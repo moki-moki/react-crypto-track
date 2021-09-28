@@ -220,6 +220,30 @@ ul > .pageNum:hover {
   transition: 0.3s ease all;
 }
 
+@media screen and (max-width: 751px) {
+  .pagination {
+    margin: 5px 0;
+  }
+  .pageNum {
+    padding: 10px;
+  }
+  ul > .pageNum {
+    margin: 0 3px;
+  }
+}
+
+@media screen and (max-width: 501px) {
+  .pageNum {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .pageNum {
+    padding: 3px;
+  }
+}
+
 /*chart */
 
 .apexcharts-candlestick {
@@ -256,11 +280,17 @@ ul > .pageNum:hover {
 
 @media screen and (max-width: 456px) {
   .btns {
-    padding: 20px;
+    padding: 15px;
   }
   .btn {
     padding: 4px;
     margin: 0 5px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .btn {
+    margin: 0 2px;
   }
 }
 
@@ -327,10 +357,10 @@ ul > .pageNum:hover {
   overflow-y: auto;
   display: flex;
   justify-content: space-between;
+  transition: all 0.2s linear;
 }
 
 .note:hover {
-  transition: all 0.3s ease;
   box-shadow: 14px 15px 13px -9px rgba(0, 0, 0, 0.47);
 }
 
@@ -342,10 +372,14 @@ ul > .pageNum:hover {
 .noteBtns {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
 }
 
 .del {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--secondaryColor);
   color: var(--text);
   height: 5vh;
@@ -353,11 +387,11 @@ ul > .pageNum:hover {
   border: 3px solid var(--primaryColor);
   border-radius: 10px;
   padding: 10px;
+  transition: 0.3s linear all;
 }
 
 .del:hover {
   background: var(--primaryColor);
-  transition: 0.3s ease all;
   cursor: pointer;
 }
 
@@ -366,6 +400,8 @@ ul > .pageNum:hover {
   color: var(--text);
   border: 2px solid var(--text);
   border-radius: 10px;
+  padding: 20px;
+  height: 4vh;
 }
 
 .date {
