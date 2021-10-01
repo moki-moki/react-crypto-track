@@ -11,11 +11,7 @@ const CoinList = ({ coinList }) => {
           <tr key={c.id}>
             <th scope="row">#{c.market_cap_rank}</th>
             <td>
-              <Link
-                to={`/coinDetails/${c.id}`}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
+              <Link to={`/coinDetails/${c.id}`}>
                 <div className="namePictureAlign">
                   <div>
                     <img className="imageSize" alt={c.symbol} src={c.image} />

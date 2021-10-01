@@ -12,10 +12,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/react-crypto-tracker" component={Table} />
-          <Route
-            path="/react-crypto-tracker/coinDetails/:id"
-            component={CoinDetail}
-          />
+          <Route path="/coinDetails/:id" component={CoinDetail} />
           <Route path="/Notes" component={Notes} />
           <Route path="*" component={NotFound} />
         </Switch>
