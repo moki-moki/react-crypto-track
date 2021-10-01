@@ -427,6 +427,19 @@ ul > .pageNum:hover {
   box-shadow: 9px 8px 23px -11px rgba(0, 0, 0, 0.69);
 }
 
+.notFound {
+  display: flex;
+  justify-content: center;
+}
+
+.notFound > div > h1 {
+  font-size: 3em;
+}
+
+.notFound > div > p {
+  font-size: 1.5em;
+}
+
 @media screen and (max-width: 780px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);

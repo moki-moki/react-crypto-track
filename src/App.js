@@ -3,6 +3,7 @@ import Table from "./components/Table";
 import CoinDetail from "./components/CoinDetail";
 import Navbar from "./components/Navbar";
 import Notes from "./components/Notes";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route exact path="/react-crypto-tracker/" component={Table} />
           <Route path="/coinDetails/:id" component={CoinDetail} />
           <Route path="/Notes" component={Notes} />
+          <Route path="*" component={NotFound} />
         </Switch>
       </Router>
     </>
