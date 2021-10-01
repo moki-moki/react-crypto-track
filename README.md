@@ -4,7 +4,7 @@ This is a Crypto Tracking App that uses [CoinGeckoApi](https://www.coingecko.com
 This app also has a simple google keep clone, that let's you create/edit/delete notes.
 
 # Demo
-[Live site](https://moki-moki.github.io/react-crypto-tracker/)
+[Live site](https://dreamy-nightingale-11eba0.netlify.app/)
 
 # Todo
 1. Improve styling
