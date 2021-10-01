@@ -1,5 +1,4 @@
 {
-  "homepage": "https://moki-moki.github.io/react-crypto-tracker/",
   "name": "react-crypto-tracker",
   "version": "0.1.0",
   "private": true,
@@ -19,8 +18,6 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
@@ -42,7 +39,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "gh-pages": "^3.2.3"
-  }
+  "devDependencies": {}
 }
