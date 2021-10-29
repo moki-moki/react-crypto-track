@@ -1,7 +1,8 @@
 # This is a personal project.
 This is a Crypto Tracking App that uses [CoinGeckoApi](https://www.coingecko.com/api/documentations/v3) for displaying data and [Apex Chart](https://apexcharts.com/) for visualizing data.
-
 This app also has a simple google keep clone, that let's you create/edit/delete notes.
+
+https://user-images.githubusercontent.com/88168610/139441675-1b970268-71c1-400b-ae61-9b965b18060b.mp4
 
 # Demo
 [Live site](https://dreamy-nightingale-11eba0.netlify.app/)
